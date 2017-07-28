@@ -10,11 +10,14 @@ using ThoughtWorks;
 using ThoughtWorks.QRCode;
 using ThoughtWorks.QRCode.Codec;
 using ThoughtWorks.QRCode.Codec.Data;
+using NBitcoin;
 
 namespace QRCode
 {
     public partial class QRCode : System.Web.UI.Page
     {
+        string address = string.Empty;
+        BitCoin BitAddress = new BitCoin();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,8 +25,9 @@ namespace QRCode
 
         protected void btnStart_Click(object sender, EventArgs e)
         {
+            address=BitAddress.BitCoin
             CreatQRCode(this.tbxMsg.Text.ToString());
-        }
+        }           
 
         /// <summary>
         /// 生成二维码

@@ -10,9 +10,7 @@
 <body style="height: 463px">
     <form id="form1" runat="server">
         <asp:Button ID="btnStart" runat="server" Height="31px" OnClick="btnStart_Click" Text="生成" Width="73px" />
-        <asp:TextBox ID="tbxMsg" runat="server" Height="29px" Width="305px"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Height="31px" Text="解码" Width="67px" />
-        <asp:TextBox ID="TextBox1" runat="server" Height="25px" Width="236px"></asp:TextBox>
+        <asp:TextBox ID="tbxMsg" runat="server" Height="29px" Width="230px"></asp:TextBox>
         <p>
             <asp:Image ID="Image" runat="server" Height="308px" Width="308px" />
         </p>
