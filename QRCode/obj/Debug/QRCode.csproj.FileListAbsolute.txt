@@ -4,3 +4,13 @@ F:\VSProject\TestProject\QRCode\QRCode\obj\Debug\QRCode.dll
 F:\VSProject\TestProject\QRCode\QRCode\obj\Debug\QRCode.pdb
 F:\VSProject\TestProject\QRCode\QRCode\bin\ThoughtWorks.QRCode.dll
 F:\VSProject\TestProject\QRCode\QRCode\obj\Debug\QRCode.csprojResolveAssemblyReference.cache
+F:\VSProject\TestProject\QRCode\QRCode\bin\NBitcoin.BouncyCastle.dll
+F:\VSProject\TestProject\QRCode\QRCode\bin\NBitcoin.dll
+F:\VSProject\TestProject\QRCode\QRCode\bin\Newtonsoft.Json.dll
+F:\VSProject\TestProject\QRCode\QRCode\bin\protobuf-net.dll
+F:\VSProject\TestProject\QRCode\QRCode\bin\NBitcoin.pdb
+F:\VSProject\TestProject\QRCode\QRCode\bin\NBitcoin.xml
+F:\VSProject\TestProject\QRCode\QRCode\bin\NBitcoin.BouncyCastle.pdb
+F:\VSProject\TestProject\QRCode\QRCode\bin\Newtonsoft.Json.xml
+F:\VSProject\TestProject\QRCode\QRCode\bin\protobuf-net.pdb
+F:\VSProject\TestProject\QRCode\QRCode\bin\protobuf-net.xml

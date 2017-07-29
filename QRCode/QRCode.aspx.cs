@@ -17,7 +17,6 @@ namespace QRCode
     public partial class QRCode : System.Web.UI.Page
     {
         string address = string.Empty;
-        BitCoin BitAddress = new BitCoin();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -25,9 +24,24 @@ namespace QRCode
 
         protected void btnStart_Click(object sender, EventArgs e)
         {
-            address=BitAddress.BitCoin
-            CreatQRCode(this.tbxMsg.Text.ToString());
-        }           
+            Key privatekey = new Key();    //私钥
+            PubKey publickey = privatekey.PubKey; //与私钥相对应得公钥
+            KeyId publicKeyHash = publickey.Hash;   //得到公钥的 hash
+            var testNetAddress = publicKeyHash.GetAddress(Network.TestNet);//测试网地址
+            var mainNetAddress = publicKeyHash.GetAddress(Network.Main);//主网地址
+            tbxMsg.Text = mainNetAddress.ToString();
+        
+        }
+
+        protected void btnCreateQR_Click(object sender, EventArgs e)
+        {
+            if (tbxMsg.Text != null && tbxMsg.Text.Length != 34)
+            {
+                Response.Write("<script>alert('地址无效！')</script>");
+                return;
+            }
+            CreatQRCode(tbxMsg.Text);
+        }  
 
         /// <summary>
         /// 生成二维码
@@ -36,7 +50,8 @@ namespace QRCode
         private void CreatQRCode(string qrMsg)
         {
             Bitmap bt;
-            string enCodeString = qrMsg + ToTimeStamp(DateTime.Now);
+            //string enCodeString = qrMsg + ToTimeStamp(DateTime.Now);
+            string enCodeString = qrMsg;
             QRCodeEncoder qrCodeEncoder = new QRCodeEncoder();
             qrCodeEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;//编码方式
             //qrCodeEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.NUMERIC;
